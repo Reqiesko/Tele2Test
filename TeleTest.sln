@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TeleTest", "TeleTest.csproj", "{B21C403D-5155-4620-8FF0-0308E73FCCE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tele2TestProject", "..\Tele2TestProject\Tele2TestProject.csproj", "{35BF3396-749E-4172-8AB6-3CD7E5A43521}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B21C403D-5155-4620-8FF0-0308E73FCCE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B21C403D-5155-4620-8FF0-0308E73FCCE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B21C403D-5155-4620-8FF0-0308E73FCCE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B21C403D-5155-4620-8FF0-0308E73FCCE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35BF3396-749E-4172-8AB6-3CD7E5A43521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35BF3396-749E-4172-8AB6-3CD7E5A43521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35BF3396-749E-4172-8AB6-3CD7E5A43521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35BF3396-749E-4172-8AB6-3CD7E5A43521}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C51E318-F416-4C1E-A3C4-94EB72DA99B3}
+	EndGlobalSection
+EndGlobal
