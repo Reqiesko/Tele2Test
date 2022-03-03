@@ -2,7 +2,7 @@
 {
     public class CitizenResponse
     {
-        public List<Сitizen> Сitizens { get; set; } = new List<Сitizen>();
+        public List<Citizen> Сitizens { get; set; } = new List<Citizen>();
 
         public int Pages { get; set; }
 

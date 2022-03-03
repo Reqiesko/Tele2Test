@@ -6,15 +6,15 @@ namespace TeleTest.Controllers
     [ApiController]
     public class CitizenController : ControllerBase
     {
-        private static List<Сitizen> citizens = new List<Сitizen>();
+        private static List<Citizen> citizens = new List<Citizen>();
 
         [HttpGet]
-        public async Task<ActionResult<List<Сitizen>>> GetAll(int page = 1, string filter = "all") // Filters: "male", "female", "all".
+        public async Task<ActionResult<List<Citizen>>> GetAll(int page = 1, string filter = "all") // Filters: "male", "female", "all".
         {
             if (page < 1) 
                 throw new ArgumentException("The page number cannot be less than 1.");
             HttpClient httpClient = new HttpClient();
-            citizens = httpClient.GetFromJsonAsync<List<Сitizen>>("http://testlodtask20172.azurewebsites.net/task").Result;
+            citizens = httpClient.GetFromJsonAsync<List<Citizen>>("http://testlodtask20172.azurewebsites.net/task").Result;
             var pageResults = 3f;
             var pageCount = Math.Ceiling(citizens.Count / pageResults);
             var someCitizens = citizens.Where(x => x.Sex == filter || filter == "all")
@@ -38,7 +38,7 @@ namespace TeleTest.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Сitizen>> GetCitizen(string id)
+        public async Task<ActionResult<Citizen>> GetCitizen(string id)
         {
             var citizen = citizens.Find(x => x.Id.Equals(id));
             if (citizen == null)
@@ -47,7 +47,7 @@ namespace TeleTest.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<List<Сitizen>>> AddCitizen(Сitizen сitizen)
+        public async Task<ActionResult<List<Citizen>>> AddCitizen(Citizen сitizen)
         {
             citizens.Add(сitizen);
             return Ok(citizens);
