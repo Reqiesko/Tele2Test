@@ -18,14 +18,14 @@ namespace Tele2TestProject
         [Test]
         public void TestOfGetAllMethod()
         {
-            Task<ActionResult<List<Ñitizen>>> task = citizenController.GetAll(1, "all");
+            Task<ActionResult<List<Citizen>>> task = citizenController.GetAll(1, "all");
             Assert.AreEqual(TaskStatus.RanToCompletion, task.Status);
         }
 
         [Test]
         public void TestOfGetCitizenMethod()
         {
-            Task<ActionResult<Ñitizen>> task = citizenController.GetCitizen("qyfgqiyhwfoq1");
+            Task<ActionResult<Citizen>> task = citizenController.GetCitizen("qyfgqiyhwfoq1");
             var res = task.Result.Result as OkObjectResult;
             Assert.IsNotNull(res.Value);
         }
